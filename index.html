@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth" >
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Show Google Raj Coder</title>
+    <style>
+      /* Splash Screen Styles */
+      #splash-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      #splash-animation {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Splash screen -->
+    <div id="splash-screen">
+      <div id="splash-animation"></div>
+    </div>
+
+    <!-- React App -->
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+    <script>
+      // Load splash animation
+      const anim = lottie.loadAnimation({
+        container: document.getElementById('splash-animation'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: "/splace.lottie"
+        // path: '/animation.json' // 💡 Place your Lottie file in public/ as animation.json
+      });
+    </script>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
